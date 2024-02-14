@@ -1,38 +1,27 @@
+import { useState } from "react";
 import "./App.css";
-import Button from "./Button";
-import Header from "./Header";
-import List from "./List";
+import Form from "./Form";
 
-function App({ list }) {
-  const getStarted = () => {
-    console.log("Get Started");
+function App() {
+  const [text, setText] = useState("");
+  const [name, setName] = useState();
+
+  const handleChange = (e) => {
+    setText(e.target.value);
   };
 
-  list = ["Benz", "Ferari", "Lexus", "Venza"];
+  const handleClick = () => {
+    setName(text);
+
+    setText("");
+  };
 
   return (
     <main>
-      <Header />
-      <section>
-        <h1>Welcome To My Website</h1>
-        <h3>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat
-          voluptatibus adipisci quaerat error, atque quod sapiente deleniti
-          sequi assumenda! A recusandae eligendi dolorum nulla voluptatem nobis
-          illo dolores quibusdam amet?
-        </h3>
-        <Button text={"Get Started"} handleClick={getStarted} />
-      </section>
-
-      <ol>
-        {list.map((li) => (
-          <List list={li} />
-        ))}
-      </ol>
+      <h1>Hello {name}</h1>
+      <Form handleChange={handleChange} text={text} handleClick={handleClick} />
     </main>
   );
 }
-
-// JSX - Javascript XML
 
 export default App;

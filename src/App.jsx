@@ -1,6 +1,9 @@
 import { useState } from "react";
 import "./App.css";
 import Form from "./Form";
+import Update from "./Update";
+import Toggle from "./Toggle";
+import Conditional from "./Conditional";
 
 function App() {
   const [text, setText] = useState("");
@@ -20,6 +23,12 @@ function App() {
     <main>
       <h1>Hello {name}</h1>
       <Form handleChange={handleChange} text={text} handleClick={handleClick} />
+
+      <Update />
+
+      <Toggle />
+
+      <Conditional />
     </main>
   );
 }

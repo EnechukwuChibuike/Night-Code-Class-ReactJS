@@ -1,7 +1,7 @@
 function Contact() {
   return (
     <main className="h-screen flex justify-center items-center">
-      <h1 className="text-5xl">Contact</h1>;
+      <h1 className="text-5xl">Contact</h1>
     </main>
   );
 }

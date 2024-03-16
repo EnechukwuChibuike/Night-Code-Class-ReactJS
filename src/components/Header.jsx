@@ -1,11 +1,11 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 
 function Header() {
   return (
     <>
       <header className="h-[10vh] flex justify-between px-5 items-center shadow-md bg-white">
         <strong>
-          <NavLink to="/">Logo.</NavLink>
+          <Link to="/">Logo.</Link>
         </strong>
 
         <nav className="flex gap-5">
